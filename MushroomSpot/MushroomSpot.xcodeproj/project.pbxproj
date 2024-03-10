@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		50C110AE2B9DCB6400D94258 /* MushroomSpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110AD2B9DCB6400D94258 /* MushroomSpotApp.swift */; };
-		50C110B02B9DCB6400D94258 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110AF2B9DCB6400D94258 /* ContentView.swift */; };
+		50C110B02B9DCB6400D94258 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110AF2B9DCB6400D94258 /* RootView.swift */; };
 		50C110B22B9DCB6500D94258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C110B12B9DCB6500D94258 /* Assets.xcassets */; };
 		50C110B52B9DCB6500D94258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C110B42B9DCB6500D94258 /* Preview Assets.xcassets */; };
 		50C110BF2B9DCB6500D94258 /* MushroomSpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110BE2B9DCB6500D94258 /* MushroomSpotTests.swift */; };
 		50C110C92B9DCB6500D94258 /* MushroomSpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110C82B9DCB6500D94258 /* MushroomSpotUITests.swift */; };
 		50C110CB2B9DCB6500D94258 /* MushroomSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110CA2B9DCB6500D94258 /* MushroomSpotUITestsLaunchTests.swift */; };
+		50C110D92B9DD28100D94258 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110D82B9DD28100D94258 /* LoginView.swift */; };
+		50C110DC2B9DD31800D94258 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110DB2B9DD31800D94258 /* LoginViewModel.swift */; };
+		50C110E12B9E142A00D94258 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E02B9E142A00D94258 /* HomeView.swift */; };
+		50C110E32B9E144500D94258 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E22B9E144500D94258 /* ProfileView.swift */; };
+		50C110E52B9E145500D94258 /* MushroomDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E42B9E145500D94258 /* MushroomDetailsView.swift */; };
+		50C110E72B9E19D900D94258 /* ProfileFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E62B9E19D900D94258 /* ProfileFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		50C110AA2B9DCB6400D94258 /* MushroomSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MushroomSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C110AD2B9DCB6400D94258 /* MushroomSpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomSpotApp.swift; sourceTree = "<group>"; };
-		50C110AF2B9DCB6400D94258 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50C110AF2B9DCB6400D94258 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = ../RootView.swift; sourceTree = "<group>"; };
 		50C110B12B9DCB6500D94258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50C110B42B9DCB6500D94258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50C110BA2B9DCB6500D94258 /* MushroomSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MushroomSpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,12 @@
 		50C110C42B9DCB6500D94258 /* MushroomSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MushroomSpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C110C82B9DCB6500D94258 /* MushroomSpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomSpotUITests.swift; sourceTree = "<group>"; };
 		50C110CA2B9DCB6500D94258 /* MushroomSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		50C110D82B9DD28100D94258 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		50C110DB2B9DD31800D94258 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		50C110E02B9E142A00D94258 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		50C110E22B9E144500D94258 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		50C110E42B9E145500D94258 /* MushroomDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomDetailsView.swift; sourceTree = "<group>"; };
+		50C110E62B9E19D900D94258 /* ProfileFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				50C110AD2B9DCB6400D94258 /* MushroomSpotApp.swift */,
-				50C110AF2B9DCB6400D94258 /* ContentView.swift */,
+				50C110D72B9DCF8900D94258 /* Screens */,
 				50C110B12B9DCB6500D94258 /* Assets.xcassets */,
 				50C110B32B9DCB6500D94258 /* Preview Content */,
 			);
@@ -125,6 +137,52 @@
 				50C110CA2B9DCB6500D94258 /* MushroomSpotUITestsLaunchTests.swift */,
 			);
 			path = MushroomSpotUITests;
+			sourceTree = "<group>";
+		};
+		50C110D72B9DCF8900D94258 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				50C110DD2B9E13F300D94258 /* Home */,
+				50C110DA2B9DD30200D94258 /* Login */,
+				50C110DE2B9E13FD00D94258 /* Profile */,
+				50C110DF2B9E140C00D94258 /* Mushroom */,
+				50C110AF2B9DCB6400D94258 /* RootView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		50C110DA2B9DD30200D94258 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				50C110DB2B9DD31800D94258 /* LoginViewModel.swift */,
+				50C110D82B9DD28100D94258 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		50C110DD2B9E13F300D94258 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				50C110E02B9E142A00D94258 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		50C110DE2B9E13FD00D94258 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				50C110E22B9E144500D94258 /* ProfileView.swift */,
+				50C110E62B9E19D900D94258 /* ProfileFieldView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		50C110DF2B9E140C00D94258 /* Mushroom */ = {
+			isa = PBXGroup;
+			children = (
+				50C110E42B9E145500D94258 /* MushroomDetailsView.swift */,
+			);
+			path = Mushroom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C110B02B9DCB6400D94258 /* ContentView.swift in Sources */,
+				50C110DC2B9DD31800D94258 /* LoginViewModel.swift in Sources */,
+				50C110E72B9E19D900D94258 /* ProfileFieldView.swift in Sources */,
+				50C110D92B9DD28100D94258 /* LoginView.swift in Sources */,
+				50C110B02B9DCB6400D94258 /* RootView.swift in Sources */,
+				50C110E12B9E142A00D94258 /* HomeView.swift in Sources */,
+				50C110E32B9E144500D94258 /* ProfileView.swift in Sources */,
 				50C110AE2B9DCB6400D94258 /* MushroomSpotApp.swift in Sources */,
+				50C110E52B9E145500D94258 /* MushroomDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
