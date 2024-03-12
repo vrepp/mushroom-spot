@@ -24,6 +24,9 @@ struct LoginView: View {
 
         VStack(alignment: .leading) {
             TextField("Email", text: $viewModel.email)
+                .textContentType(.emailAddress)
+                .disableAutocorrection(true)
+                .textInputAutocapitalization(.never)
                 .textFieldStyle(.roundedBorder)
                 .padding(.top, Constants.padding)
 

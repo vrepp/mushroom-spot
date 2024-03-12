@@ -14,9 +14,6 @@ struct RootView: View {
     var body: some View {
         if !loginViewModel.isLoggedIn {
             LoginView(viewModel: loginViewModel)
-                .onAppear {
-                    loginViewModel.logIn()
-                }
         } else {
             HomeView(viewModel: homeViewModel)
         }
