@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var viewModel = HomeViewModel()
+
     var body: some View {
         NavigationStack {
-            List {
-                    Text("Hello World")
-                    Text("Hello World")
-                    Text("Hello World")
+            List(viewModel.mushrooms, id: \.id) { mushroom in
+                NavigationLink(
+                   destination: MushroomDetailsView(mushroom: mushroom)) {
+                       MushroomListRowView(mushroom: mushroom)
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigation) {
-                    Button("Profile") {}
+                    Button("Profile") {
+                        viewModel.showProfile()
+                    }
                 }
             }
+            .sheet(isPresented: $viewModel.profileIsPresented, content: {
+                ProfileView()
+            })
+        }.onAppear {
+            viewModel.refreshList()
         }
     }
 }

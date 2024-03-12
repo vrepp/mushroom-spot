@@ -20,6 +20,18 @@
 		50C110E32B9E144500D94258 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E22B9E144500D94258 /* ProfileView.swift */; };
 		50C110E52B9E145500D94258 /* MushroomDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E42B9E145500D94258 /* MushroomDetailsView.swift */; };
 		50C110E72B9E19D900D94258 /* ProfileFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E62B9E19D900D94258 /* ProfileFieldView.swift */; };
+		50C110E92B9FD99500D94258 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110E82B9FD99500D94258 /* HomeViewModel.swift */; };
+		50C110EC2B9FDD6300D94258 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110EB2B9FDD6300D94258 /* Profile.swift */; };
+		50C110EE2B9FDDDF00D94258 /* Mushroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110ED2B9FDDDF00D94258 /* Mushroom.swift */; };
+		50C110F02B9FE00400D94258 /* MushroomListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110EF2B9FE00400D94258 /* MushroomListRowView.swift */; };
+		50C110F32B9FE11D00D94258 /* MushroomMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110F22B9FE11D00D94258 /* MushroomMock.swift */; };
+		50C110F52B9FE43900D94258 /* mushrooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C110F42B9FE43900D94258 /* mushrooms.json */; };
+		50C110F82B9FE48400D94258 /* ProfileMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110F72B9FE48400D94258 /* ProfileMock.swift */; };
+		50C110FB2B9FE4FE00D94258 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110FA2B9FE4FE00D94258 /* DataExtension.swift */; };
+		50C110FE2B9FE7AF00D94258 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110FD2B9FE7AF00D94258 /* ProfileResponse.swift */; };
+		50C111002B9FE7E300D94258 /* MushroomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C110FF2B9FE7E300D94258 /* MushroomsResponse.swift */; };
+		50C111022B9FE84200D94258 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111012B9FE84200D94258 /* LoginResponse.swift */; };
+		50C111042B9FEAED00D94258 /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111032B9FEAED00D94258 /* JSONDecoderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +68,19 @@
 		50C110E22B9E144500D94258 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		50C110E42B9E145500D94258 /* MushroomDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomDetailsView.swift; sourceTree = "<group>"; };
 		50C110E62B9E19D900D94258 /* ProfileFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldView.swift; sourceTree = "<group>"; };
+		50C110E82B9FD99500D94258 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		50C110EB2B9FDD6300D94258 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		50C110ED2B9FDDDF00D94258 /* Mushroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mushroom.swift; sourceTree = "<group>"; };
+		50C110EF2B9FE00400D94258 /* MushroomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomListRowView.swift; sourceTree = "<group>"; };
+		50C110F22B9FE11D00D94258 /* MushroomMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomMock.swift; sourceTree = "<group>"; };
+		50C110F42B9FE43900D94258 /* mushrooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mushrooms.json; sourceTree = "<group>"; };
+		50C110F62B9FE46D00D94258 /* profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile.json; sourceTree = "<group>"; };
+		50C110F72B9FE48400D94258 /* ProfileMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMock.swift; sourceTree = "<group>"; };
+		50C110FA2B9FE4FE00D94258 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		50C110FD2B9FE7AF00D94258 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		50C110FF2B9FE7E300D94258 /* MushroomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomsResponse.swift; sourceTree = "<group>"; };
+		50C111012B9FE84200D94258 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		50C111032B9FEAED00D94258 /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				50C110AD2B9DCB6400D94258 /* MushroomSpotApp.swift */,
+				50C110EA2B9FDCFC00D94258 /* Models */,
 				50C110D72B9DCF8900D94258 /* Screens */,
 				50C110B12B9DCB6500D94258 /* Assets.xcassets */,
+				50C110F92B9FE4F000D94258 /* Extensions */,
+				50C110F12B9FE10C00D94258 /* Mocks */,
 				50C110B32B9DCB6500D94258 /* Preview Content */,
 			);
 			path = MushroomSpot;
@@ -142,11 +170,11 @@
 		50C110D72B9DCF8900D94258 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				50C110AF2B9DCB6400D94258 /* RootView.swift */,
 				50C110DD2B9E13F300D94258 /* Home */,
 				50C110DA2B9DD30200D94258 /* Login */,
 				50C110DE2B9E13FD00D94258 /* Profile */,
 				50C110DF2B9E140C00D94258 /* Mushroom */,
-				50C110AF2B9DCB6400D94258 /* RootView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -163,6 +191,7 @@
 		50C110DD2B9E13F300D94258 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				50C110E82B9FD99500D94258 /* HomeViewModel.swift */,
 				50C110E02B9E142A00D94258 /* HomeView.swift */,
 			);
 			path = Home;
@@ -181,8 +210,49 @@
 			isa = PBXGroup;
 			children = (
 				50C110E42B9E145500D94258 /* MushroomDetailsView.swift */,
+				50C110EF2B9FE00400D94258 /* MushroomListRowView.swift */,
 			);
 			path = Mushroom;
+			sourceTree = "<group>";
+		};
+		50C110EA2B9FDCFC00D94258 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50C110EB2B9FDD6300D94258 /* Profile.swift */,
+				50C110ED2B9FDDDF00D94258 /* Mushroom.swift */,
+				50C110FC2B9FE79900D94258 /* API */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50C110F12B9FE10C00D94258 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				50C110F22B9FE11D00D94258 /* MushroomMock.swift */,
+				50C110F72B9FE48400D94258 /* ProfileMock.swift */,
+				50C110F42B9FE43900D94258 /* mushrooms.json */,
+				50C110F62B9FE46D00D94258 /* profile.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		50C110F92B9FE4F000D94258 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50C110FA2B9FE4FE00D94258 /* DataExtension.swift */,
+				50C111032B9FEAED00D94258 /* JSONDecoderExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50C110FC2B9FE79900D94258 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				50C111012B9FE84200D94258 /* LoginResponse.swift */,
+				50C110FF2B9FE7E300D94258 /* MushroomsResponse.swift */,
+				50C110FD2B9FE7AF00D94258 /* ProfileResponse.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C110B52B9DCB6500D94258 /* Preview Assets.xcassets in Resources */,
+				50C110F52B9FE43900D94258 /* mushrooms.json in Resources */,
 				50C110B22B9DCB6500D94258 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,12 +386,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C111042B9FEAED00D94258 /* JSONDecoderExtension.swift in Sources */,
+				50C110FE2B9FE7AF00D94258 /* ProfileResponse.swift in Sources */,
 				50C110DC2B9DD31800D94258 /* LoginViewModel.swift in Sources */,
+				50C111022B9FE84200D94258 /* LoginResponse.swift in Sources */,
+				50C110E92B9FD99500D94258 /* HomeViewModel.swift in Sources */,
 				50C110E72B9E19D900D94258 /* ProfileFieldView.swift in Sources */,
 				50C110D92B9DD28100D94258 /* LoginView.swift in Sources */,
+				50C110FB2B9FE4FE00D94258 /* DataExtension.swift in Sources */,
+				50C110EC2B9FDD6300D94258 /* Profile.swift in Sources */,
+				50C110F02B9FE00400D94258 /* MushroomListRowView.swift in Sources */,
+				50C110EE2B9FDDDF00D94258 /* Mushroom.swift in Sources */,
 				50C110B02B9DCB6400D94258 /* RootView.swift in Sources */,
 				50C110E12B9E142A00D94258 /* HomeView.swift in Sources */,
+				50C111002B9FE7E300D94258 /* MushroomsResponse.swift in Sources */,
+				50C110F82B9FE48400D94258 /* ProfileMock.swift in Sources */,
 				50C110E32B9E144500D94258 /* ProfileView.swift in Sources */,
+				50C110F32B9FE11D00D94258 /* MushroomMock.swift in Sources */,
 				50C110AE2B9DCB6400D94258 /* MushroomSpotApp.swift in Sources */,
 				50C110E52B9E145500D94258 /* MushroomDetailsView.swift in Sources */,
 			);

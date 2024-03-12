@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct MushroomDetailsView: View {
+    let mushroom: Mushroom
+
     var body: some View {
         VStack (alignment: .center) {
-            Image(.mushroom)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 300)
-                .padding(Constants.padding)
+            AsyncImage(
+                url: URL(string: mushroom.profilePicture),
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: Constants.imageHeight)
+                        .padding(Constants.padding)
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
 
-            Text("Mushroom name")
+            Text(mushroom.name)
                 .font(.largeTitle)
                 .padding(Constants.padding)
 
-            Text("Mushroom latin name")
+            Text(mushroom.latinName)
                 .font(.title)
                 .italic()
                 .padding(Constants.padding)
@@ -33,10 +43,11 @@ struct MushroomDetailsView: View {
 extension MushroomDetailsView {
     enum Constants {
         static let padding = 20.0
+        static let imageHeight = 300.0
         static let imagePadding = 50.0
     }
 }
 
 #Preview {
-    MushroomDetailsView()
+    MushroomDetailsView(mushroom: Mushroom.mockList.first!)
 }

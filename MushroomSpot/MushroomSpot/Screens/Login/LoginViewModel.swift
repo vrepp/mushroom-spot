@@ -12,5 +12,10 @@ class LoginViewModel {
     var email = ""
     var password = ""
 
-    
+    var isLoggedIn = false
+
+    func logIn() {
+        // TODO: call login request
+        isLoggedIn = true
+    }
 }

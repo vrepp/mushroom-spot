@@ -9,9 +9,17 @@ import SwiftUI
 
 struct RootView: View {
     private let loginViewModel = LoginViewModel()
+    private let homeViewModel = HomeViewModel()
 
     var body: some View {
-        LoginView(viewModel: loginViewModel)
+        if !loginViewModel.isLoggedIn {
+            LoginView(viewModel: loginViewModel)
+                .onAppear {
+                    loginViewModel.logIn()
+                }
+        } else {
+            HomeView(viewModel: homeViewModel)
+        }
     }
 }
 
