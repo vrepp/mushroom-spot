@@ -9,7 +9,7 @@ import Foundation
 
 extension Encodable {
     /// return as JSON
-    func asJsonData() -> Data? {
+    func asData() -> Data? {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.dateEncodingStrategy = .iso8601
         jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
@@ -19,9 +19,16 @@ extension Encodable {
 
     /// return as Dictionary
     func asDictionary() -> [String: Any]? {
-        guard let data = asJsonData() else { return nil }
-        
+        guard let data = asData() else { return nil }
+
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+    }
+
+    /// return as Data (for Http Body)
+    func asJsonData() -> Data? {
+        guard let dic = asDictionary() else { return nil }
+
+        return try? JSONSerialization.data(withJSONObject: dic, options: .fragmentsAllowed)
     }
 
     /// return as QueryItems

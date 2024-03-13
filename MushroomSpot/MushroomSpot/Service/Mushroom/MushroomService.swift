@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol MushroomServiceProtocol: AnyService {
-    func fetch() -> AnyPublisher<[Mushroom], Error>
+    func fetch() async throws -> [Mushroom]
 }
 
 struct MushroomService: MushroomServiceProtocol {
@@ -19,20 +19,10 @@ struct MushroomService: MushroomServiceProtocol {
         self.client = client
     }
 
-    func fetch() -> AnyPublisher<[Mushroom], Error> {
+    func fetch() async throws -> [Mushroom] {
         let endpoint = API.getMushrooms()
 
-        return Deferred {
-            Future { promise in
-                Task {
-                    do {
-                        let response = try await client.performRequest(endpoint: endpoint)
-                        promise(.success(response))
-                    } catch {
-                        promise(.failure(error))
-                    }
-                }
-            }
-        }.eraseToAnyPublisher()
+        let response = try await client.performRequest(endpoint: endpoint)
+        return response.mushrooms
     }
 }

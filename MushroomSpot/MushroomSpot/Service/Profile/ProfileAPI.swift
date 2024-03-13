@@ -9,7 +9,7 @@ import Foundation
 
 extension API {
     /// Fetch Podcasts by Search term
-    static func getProfile() -> HttpEndpoint<Profile> {
+    static func getProfile() -> HttpEndpoint<ProfileResponse> {
         return HttpEndpoint(
             method: .get,
             baseUrl: .default,

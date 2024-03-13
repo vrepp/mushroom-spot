@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol ProfileServiceProtocol: AnyService {
-    func fetch() -> AnyPublisher<Profile, Error>
+    func fetch() async throws -> Profile
 }
 
 struct ProfileService: ProfileServiceProtocol {
@@ -19,20 +19,10 @@ struct ProfileService: ProfileServiceProtocol {
         self.client = client
     }
 
-    func fetch() -> AnyPublisher<Profile, Error> {
+    func fetch() async throws -> Profile {
         let endpoint = API.getProfile()
 
-        return Deferred {
-            Future { promise in
-                Task {
-                    do {
-                        let response = try await client.performRequest(endpoint: endpoint)
-                        promise(.success(response))
-                    } catch {
-                        promise(.failure(error))
-                    }
-                }
-            }
-        }.eraseToAnyPublisher()
+        let response = try await client.performRequest(endpoint: endpoint)
+        return response.user
     }
 }

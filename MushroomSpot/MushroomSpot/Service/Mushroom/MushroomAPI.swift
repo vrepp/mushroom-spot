@@ -7,11 +7,11 @@
 
 extension API {
     /// Fetch Podcasts by Search term
-    static func getMushrooms() -> HttpEndpoint<[Mushroom]> {
+    static func getMushrooms() -> HttpEndpoint<MushroomsResponse> {
         return HttpEndpoint(
             method: .get,
             baseUrl: .default,
-            path: "mushrooms",
+            path: "api/v1/mushrooms",
             parameters: nil
         )
     }

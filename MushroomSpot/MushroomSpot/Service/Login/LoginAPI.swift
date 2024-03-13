@@ -9,11 +9,11 @@ import Foundation
 
 extension API {
     /// Fetch Podcasts by Search term
-    static func login(_ request: LoginRequest) -> HttpEndpoint<Profile> {
+    static func login(_ request: LoginRequest) -> HttpEndpoint<LoginResponse> {
         return HttpEndpoint(
             method: .post,
             baseUrl: .default,
-            path: "users/me",
+            path: "api/v1/users/login",
             parameters: request
         )
     }

@@ -41,6 +41,7 @@ extension HttpEndpoint {
         self.init(method: method, baseUrl: baseUrl, path: path, parameters: parameters) {
             let jsonDecoder = JSONDecoder()
             jsonDecoder.dateDecodingStrategy = .iso8601
+            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             return try jsonDecoder.decode(HttpResponse.self, from: $0)
         }
     }
@@ -63,8 +64,8 @@ extension HttpEndpoint {
             }
 
         case .post:
-            urlRequest.httpBody = parameters?.asJsonData()
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.httpBody = parameters?.asData()
 
         }
 

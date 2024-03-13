@@ -45,6 +45,7 @@
 		50C111212B9FF8D100D94258 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111202B9FF8D100D94258 /* LoginAPI.swift */; };
 		50C111232B9FF8D900D94258 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111222B9FF8D900D94258 /* LoginService.swift */; };
 		50C111252B9FF94A00D94258 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111242B9FF94A00D94258 /* LoginRequest.swift */; };
+		50C111272BA231EB00D94258 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111262BA231EB00D94258 /* AppSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		50C111202B9FF8D100D94258 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		50C111222B9FF8D900D94258 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		50C111242B9FF94A00D94258 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		50C111262BA231EB00D94258 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				50C110AD2B9DCB6400D94258 /* MushroomSpotApp.swift */,
+				50C111262BA231EB00D94258 /* AppSession.swift */,
 				50C111052B9FF4F400D94258 /* Core */,
 				50C111062B9FF50500D94258 /* Configuration */,
 				50C110EA2B9FDCFC00D94258 /* Models */,
@@ -199,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				50C110AF2B9DCB6400D94258 /* RootView.swift */,
-				50C110DD2B9E13F300D94258 /* Home */,
 				50C110DA2B9DD30200D94258 /* Login */,
+				50C110DD2B9E13F300D94258 /* Home */,
 				50C110DE2B9E13FD00D94258 /* Profile */,
 				50C110DF2B9E140C00D94258 /* Mushroom */,
 			);
@@ -277,8 +280,8 @@
 		50C110FC2B9FE79900D94258 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				50C111012B9FE84200D94258 /* LoginResponse.swift */,
 				50C111242B9FF94A00D94258 /* LoginRequest.swift */,
+				50C111012B9FE84200D94258 /* LoginResponse.swift */,
 				50C110FF2B9FE7E300D94258 /* MushroomsResponse.swift */,
 				50C110FD2B9FE7AF00D94258 /* ProfileResponse.swift */,
 			);
@@ -508,6 +511,7 @@
 				50C111212B9FF8D100D94258 /* LoginAPI.swift in Sources */,
 				50C111002B9FE7E300D94258 /* MushroomsResponse.swift in Sources */,
 				50C110F82B9FE48400D94258 /* ProfileMock.swift in Sources */,
+				50C111272BA231EB00D94258 /* AppSession.swift in Sources */,
 				50C110E32B9E144500D94258 /* ProfileView.swift in Sources */,
 				50C1110D2B9FF5BB00D94258 /* HttpClient.swift in Sources */,
 				50C110F32B9FE11D00D94258 /* MushroomMock.swift in Sources */,

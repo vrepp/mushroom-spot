@@ -8,5 +8,5 @@
 import Foundation
 
 struct LoginResponse: Decodable {
-    let auth_token: String
+    let authToken: String
 }

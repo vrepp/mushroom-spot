@@ -19,16 +19,24 @@ protocol HttpClientProvider: AnyObject {
 final class HttpClient: HttpClientProvider {
     let urlSession: URLSession
     let httpHeaders: HttpHeaders?
+    let authToken: String?
 
-    init(urlSession: URLSession = .shared, httpHeaders: HttpHeaders? = nil) {
+    init(urlSession: URLSession = .shared, httpHeaders: HttpHeaders? = nil, authToken: String? = nil) {
         self.urlSession = urlSession
         self.httpHeaders = httpHeaders
+        self.authToken = authToken
     }
 
     /// Perform HTTP request
     func performRequest<T>(endpoint: HttpEndpoint<T>) async throws -> T where T: Decodable {
         var urlRequest = try endpoint.urlRequest()
-        urlRequest.allHTTPHeaderFields = httpHeaders
+        httpHeaders?.forEach { (key: String, value: String) in
+            urlRequest.addValue(value, forHTTPHeaderField: key)
+        }
+
+        if let authToken {
+            urlRequest.addValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+        }
 
         let (data, response) = try await urlSession.data(for: urlRequest, delegate: nil)
         guard let response = response as? HTTPURLResponse else {
