@@ -21,15 +21,17 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Button("Profile") {
-                        viewModel.showProfile()
+                        Task { await viewModel.showProfile() }
                     }
                 }
             }
             .sheet(isPresented: $viewModel.profileIsPresented, content: {
-                ProfileView()
+                if let profile = viewModel.profile {
+                    ProfileView(profile: profile)
+                }
             })
-        }.onAppear {
-            viewModel.refreshList()
+        }.task {
+            await viewModel.refreshList()
         }
     }
 }

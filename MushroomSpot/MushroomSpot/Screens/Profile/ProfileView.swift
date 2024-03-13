@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let profile: Profile
+
     var body: some View {
         VStack (alignment: .center) {
             VStack (alignment: .leading) {
-                ProfileFieldView(name: "Username:", value: "<USERNAME>")
+                ProfileFieldView(name: "Username:", value: profile.username)
                     .padding(.top)
 
-                ProfileFieldView(name: "First name:", value: "<FIRSTNAME>")
+                ProfileFieldView(name: "First name:", value: profile.firstName)
                     .padding(.top)
 
-                ProfileFieldView(name: "First name:", value: "<LASTNAME>")
+                ProfileFieldView(name: "First name:", value: profile.lastName)
                     .padding(.top)
             }.padding(Constants.padding)
 
             Spacer()
 
             HStack {
-                Button(action: {}) {
+                Button(action: { AppSession.shared.logOut() }) {
                     Text("Sign out")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -43,5 +45,5 @@ extension ProfileView {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(profile: Profile.mock!)
 }

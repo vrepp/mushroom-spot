@@ -36,7 +36,7 @@ struct LoginView: View {
         }.padding(Constants.padding)
 
         HStack {
-            Button(action: {}) {
+            Button(action: { Task { await viewModel.logIn() } }) {
                 Text("Sign In")
                     .font(.headline)
                     .foregroundColor(.white)

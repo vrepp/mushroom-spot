@@ -14,18 +14,38 @@ class HomeViewModel {
 
     var profileIsPresented = false
 
-    func showProfile() {
+    private let profileService: ProfileServiceProtocol
+    private let mushroomService: MushroomServiceProtocol
+
+    init(profileService: ProfileServiceProtocol = ProfileService(), mushroomService: MushroomServiceProtocol = MushroomService()) {
+        self.profileService = profileService
+        self.mushroomService = mushroomService
+    }
+
+    @MainActor
+    func showProfile() async {
         guard profile == nil else {
             profileIsPresented = true
             return
         }
 
-        // TODO: fetch Profile; show modal
+        do {
+            profile = try await profileService.fetch()
+            profileIsPresented = true
+        } catch {
+            print("Profile fetch error: \(error.localizedDescription)")
+            // TODO: show error
+        }
     }
 
-    func refreshList() {
-        // TODO: fetch Mushroom list
-
+    @MainActor
+    func refreshList() async {
+        do {
+            mushrooms = try await mushroomService.fetch()
+        } catch {
+            print("Mushtooms fetch error: \(error.localizedDescription)")
+            // TODO: show error
+        }
         mushrooms = Mushroom.mockList
     }
 }

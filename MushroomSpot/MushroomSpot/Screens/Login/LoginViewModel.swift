@@ -12,10 +12,22 @@ class LoginViewModel {
     var email = ""
     var password = ""
 
-    var isLoggedIn = false
+    private let loginService: LoginServiceProtocol
 
-    func logIn() {
-        // TODO: call login request
-        isLoggedIn = true
+    init(loginService: LoginServiceProtocol = LoginService()) {
+        self.loginService = loginService
+    }
+
+    @MainActor
+    func logIn() async {
+        guard AppSession.shared.authToken == nil else { return }
+
+        do {
+            let authToken = try await loginService.login(email: email, password: password)
+            AppSession.shared.logIn(with: authToken)
+        } catch {
+            print("Login error: \(error.localizedDescription)")
+            // TODO: show error
+        }
     }
 }

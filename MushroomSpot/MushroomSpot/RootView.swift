@@ -12,10 +12,15 @@ struct RootView: View {
     private let homeViewModel = HomeViewModel()
 
     var body: some View {
-        if !loginViewModel.isLoggedIn {
-            LoginView(viewModel: loginViewModel)
-        } else {
+        if let authToken = AppSession.shared.authToken {
+            let httpClient = HttpClient(authToken: authToken)
+            let profileService = ProfileService(client: httpClient)
+            let mushroomService = MushroomService(client: httpClient)
+            let homeViewModel = HomeViewModel(profileService: profileService, mushroomService: mushroomService)
+
             HomeView(viewModel: homeViewModel)
+        } else {
+            LoginView(viewModel: loginViewModel)
         }
     }
 }
