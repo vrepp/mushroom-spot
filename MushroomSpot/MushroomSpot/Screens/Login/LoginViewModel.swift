@@ -18,6 +18,11 @@ class LoginViewModel {
         self.loginService = loginService
     }
 
+    func clearForm() {
+        email = ""
+        password = ""
+    }
+
     @MainActor
     func logIn() async {
         guard AppSession.shared.authToken == nil else { return }

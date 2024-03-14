@@ -63,6 +63,9 @@ struct LoginView: View {
             }
             .padding(Constants.padding)
         }
+        .onAppear {
+            viewModel.clearForm()
+        }
     }
 }
 
