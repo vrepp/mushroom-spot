@@ -41,7 +41,7 @@ struct LoginView: View {
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
                     .padding(.top, Constants.padding)
-                    .validate(item: $viewModel.email, rule: ValidationRule.password) { error in
+                    .validate(item: $viewModel.password, rule: ValidationRule.password) { error in
                         Text(error)
                             .font(.callout)
                             .foregroundColor(.red)
