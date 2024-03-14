@@ -46,6 +46,10 @@
 		50C111232B9FF8D900D94258 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111222B9FF8D900D94258 /* LoginService.swift */; };
 		50C111252B9FF94A00D94258 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111242B9FF94A00D94258 /* LoginRequest.swift */; };
 		50C111272BA231EB00D94258 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111262BA231EB00D94258 /* AppSession.swift */; };
+		50C1112A2BA270B600D94258 /* ValidationPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111292BA270B600D94258 /* ValidationPreferenceKey.swift */; };
+		50C1112C2BA2716800D94258 /* ValidationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112B2BA2716800D94258 /* ValidationModifier.swift */; };
+		50C1112E2BA2725500D94258 /* ValidationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112D2BA2725500D94258 /* ValidationFormView.swift */; };
+		50C111302BA28A7000D94258 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112F2BA28A7000D94258 /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,10 @@
 		50C111222B9FF8D900D94258 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		50C111242B9FF94A00D94258 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		50C111262BA231EB00D94258 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		50C111292BA270B600D94258 /* ValidationPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPreferenceKey.swift; sourceTree = "<group>"; };
+		50C1112B2BA2716800D94258 /* ValidationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModifier.swift; sourceTree = "<group>"; };
+		50C1112D2BA2725500D94258 /* ValidationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFormView.swift; sourceTree = "<group>"; };
+		50C1112F2BA28A7000D94258 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +301,7 @@
 			children = (
 				50C110F92B9FE4F000D94258 /* Extensions */,
 				50C111072B9FF55700D94258 /* Networking */,
+				50C111282BA2706100D94258 /* Validation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -351,6 +360,17 @@
 				50C111222B9FF8D900D94258 /* LoginService.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		50C111282BA2706100D94258 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				50C111292BA270B600D94258 /* ValidationPreferenceKey.swift */,
+				50C1112B2BA2716800D94258 /* ValidationModifier.swift */,
+				50C1112D2BA2725500D94258 /* ValidationFormView.swift */,
+				50C1112F2BA28A7000D94258 /* Validation.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,9 +505,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C111042B9FEAED00D94258 /* JSONDecoderExtension.swift in Sources */,
+				50C1112C2BA2716800D94258 /* ValidationModifier.swift in Sources */,
 				50C110FE2B9FE7AF00D94258 /* ProfileResponse.swift in Sources */,
 				50C1111A2B9FF70F00D94258 /* ProfileService.swift in Sources */,
 				50C110DC2B9DD31800D94258 /* LoginViewModel.swift in Sources */,
+				50C1112E2BA2725500D94258 /* ValidationFormView.swift in Sources */,
 				50C111022B9FE84200D94258 /* LoginResponse.swift in Sources */,
 				50C110E92B9FD99500D94258 /* HomeViewModel.swift in Sources */,
 				50C110E72B9E19D900D94258 /* ProfileFieldView.swift in Sources */,
@@ -496,6 +518,7 @@
 				50C111232B9FF8D900D94258 /* LoginService.swift in Sources */,
 				50C111132B9FF66C00D94258 /* EncodableExtension.swift in Sources */,
 				50C110FB2B9FE4FE00D94258 /* DataExtension.swift in Sources */,
+				50C111302BA28A7000D94258 /* Validation.swift in Sources */,
 				50C110EC2B9FDD6300D94258 /* Profile.swift in Sources */,
 				50C1111C2B9FF7B500D94258 /* MushroomAPI.swift in Sources */,
 				50C110F02B9FE00400D94258 /* MushroomListRowView.swift in Sources */,
@@ -509,6 +532,7 @@
 				50C110E12B9E142A00D94258 /* HomeView.swift in Sources */,
 				50C1110F2B9FF5D500D94258 /* API.swift in Sources */,
 				50C111212B9FF8D100D94258 /* LoginAPI.swift in Sources */,
+				50C1112A2BA270B600D94258 /* ValidationPreferenceKey.swift in Sources */,
 				50C111002B9FE7E300D94258 /* MushroomsResponse.swift in Sources */,
 				50C110F82B9FE48400D94258 /* ProfileMock.swift in Sources */,
 				50C111272BA231EB00D94258 /* AppSession.swift in Sources */,

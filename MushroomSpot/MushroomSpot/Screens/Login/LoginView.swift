@@ -22,29 +22,47 @@ struct LoginView: View {
                 .font(.largeTitle)
         }
 
-        VStack(alignment: .leading) {
-            TextField("Email", text: $viewModel.email)
-                .textContentType(.emailAddress)
-                .disableAutocorrection(true)
-                .textInputAutocapitalization(.never)
-                .textFieldStyle(.roundedBorder)
-                .padding(.top, Constants.padding)
+        ValidationFormView { isValid in
+            VStack(alignment: .leading) {
+                TextField("Email", text: $viewModel.email)
+                    .textContentType(.emailAddress)
+                    .disableAutocorrection(true)
+                    .textInputAutocapitalization(.never)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.top, Constants.padding)
+                    .validate(item: $viewModel.email, rule: ValidationRule.email) { error in
+                        Text(error)
+                            .font(.callout)
+                            .foregroundColor(.red)
+                    }
 
-            SecureField("Password", text: $viewModel.password)
-                .textFieldStyle(.roundedBorder)
-                .padding(.top, Constants.padding)
-        }.padding(Constants.padding)
+                TextField("Password", text: $viewModel.password)
+                    .disableAutocorrection(true)
+                    .textInputAutocapitalization(.never)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.top, Constants.padding)
+                    .validate(item: $viewModel.email, rule: ValidationRule.password) { error in
+                        Text(error)
+                            .font(.callout)
+                            .foregroundColor(.red)
+                    }
+            }
+            .padding(Constants.padding)
 
-        HStack {
-            Button(action: { Task { await viewModel.logIn() } }) {
-                Text("Sign In")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: Constants.buttonHeight)
-            }.buttonStyle(.borderedProminent)
-        }.padding(Constants.padding)
+            Spacer()
 
-        Spacer()
+            HStack {
+                Button(action: { Task { await viewModel.logIn() } }) {
+                    Text("Sign In")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: Constants.buttonHeight)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled( !isValid() )
+            }
+            .padding(Constants.padding)
+        }
     }
 }
 
