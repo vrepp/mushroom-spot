@@ -36,7 +36,7 @@ struct LoginView: View {
                             .foregroundColor(.red)
                     }
 
-                TextField("Password", text: $viewModel.password)
+                SecureField("Password", text: $viewModel.password)
                     .disableAutocorrection(true)
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
