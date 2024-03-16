@@ -50,6 +50,7 @@
 		50C1112C2BA2716800D94258 /* ValidationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112B2BA2716800D94258 /* ValidationModifier.swift */; };
 		50C1112E2BA2725500D94258 /* ValidationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112D2BA2725500D94258 /* ValidationFormView.swift */; };
 		50C111302BA28A7000D94258 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1112F2BA28A7000D94258 /* Validation.swift */; };
+		50C111322BA5EDAB00D94258 /* MushroomLoginFormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C111312BA5EDAB00D94258 /* MushroomLoginFormValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		50C1112B2BA2716800D94258 /* ValidationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModifier.swift; sourceTree = "<group>"; };
 		50C1112D2BA2725500D94258 /* ValidationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFormView.swift; sourceTree = "<group>"; };
 		50C1112F2BA28A7000D94258 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		50C111312BA5EDAB00D94258 /* MushroomLoginFormValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomLoginFormValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				50C110BE2B9DCB6500D94258 /* MushroomSpotTests.swift */,
+				50C111312BA5EDAB00D94258 /* MushroomLoginFormValidation.swift */,
 			);
 			path = MushroomSpotTests;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C111322BA5EDAB00D94258 /* MushroomLoginFormValidation.swift in Sources */,
 				50C110BF2B9DCB6500D94258 /* MushroomSpotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
