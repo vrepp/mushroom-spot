@@ -6,7 +6,7 @@
 //
 
 extension API {
-    /// Fetch Podcasts by Search term
+    /// Fetch Mushrooms
     static func getMushrooms() -> HttpEndpoint<MushroomsResponse> {
         return HttpEndpoint(
             method: .get,

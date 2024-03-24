@@ -8,7 +8,7 @@
 import Foundation
 
 extension API {
-    /// Fetch Podcasts by Search term
+    /// Login with Email and Password
     static func login(_ request: LoginRequest) -> HttpEndpoint<LoginResponse> {
         return HttpEndpoint(
             method: .post,
